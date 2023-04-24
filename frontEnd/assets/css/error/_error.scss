@@ -1,0 +1,22 @@
+main.error {
+  @include flexCenter();
+  flex-direction: column;
+  justify-content: start;
+
+  height: 100vh;
+  background-image: url("../../assets/bg-home.jpg");
+  background-size: contain;
+  background-position: left;
+
+  h1 {
+    font-size: 8rem;
+    color: #666;
+    margin: 100px 0 10px 0;
+  }
+
+  p {
+    font-size: 2rem;
+    color: $primaryTextColor;
+    margin-bottom: 50px;
+  }
+}

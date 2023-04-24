@@ -1,0 +1,87 @@
+// Colors
+$primaryTextColor: #fff;
+$secondaryTextColor: #999999;
+$labelColor: #ddd;
+$cyan-500: #81d8f7;
+$zync-800: #212124;
+
+// Times transition
+$delay: 0.3s;
+
+@mixin flexCenter($justify: center) {
+	display: flex;
+	align-items: center;
+
+	@if $justify == center {
+		justify-content: center;
+	} @else if $justify == around {
+		justify-content: space-around;
+	} @else if $justify == between {
+		justify-content: space-between;
+	} @else if $justify == evenly {
+		justify-content: space-evenly;
+	}
+}
+
+@mixin boundaries($isAuto: true) {
+	width: 90%;
+	max-width: 1200px;
+
+	@if $isAuto == true {
+		margin: 0 auto;
+	}
+}
+
+@mixin bgBlur($bg: rgba($primaryTextColor, 0.1), $blur: 5px) {
+	background: $bg;
+	backdrop-filter: blur($blur);
+}
+
+// Componentes Globais
+
+.title {
+	color: $primaryTextColor;
+	font-weight: normal;
+	font-size: 3.2rem;
+}
+.subtitle {
+	color: $secondaryTextColor;
+	font-size: 2.2rem;
+	font-weight: normal;
+}
+
+.label {
+	font-size: 1.6rem;
+	color: $labelColor;
+}
+
+.input {
+	background-color: $zync-800;
+	width: 100%;
+	height: 35px;
+	border-radius: 5px;
+	padding-left: 10px;
+	color: $secondaryTextColor;
+	font-size: 1.8rem;
+}
+.input:focus {
+	border: 1px solid $secondaryTextColor;
+}
+
+.button {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: 4.2rem;
+	border-radius: 5px;
+	font-size: 1.8rem;
+	color: $cyan-500;
+	background-color: transparent;
+	border: 1px solid $cyan-500;
+	transition: color 0.3s, background 0.3s;
+}
+
+.button:hover {
+	color: $zync-800;
+	background-color: $cyan-500;
+}

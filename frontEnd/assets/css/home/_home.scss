@@ -1,0 +1,90 @@
+.home {
+	min-height: 100vh;
+	background-image: url("../../assets/bg-home.jpg");
+	background-size: contain;
+	background-position: left;
+	display: flex;
+	align-items: center;
+
+	&Container {
+		@include boundaries();
+		display: flex;
+		height: 100%;
+	}
+
+	&__banner {
+		height: 70%;
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 12rem;
+
+		&__header {
+			display: flex;
+			flex-direction: column;
+			gap: 1.6rem;
+		}
+	}
+
+	&__formSection {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 3rem;
+		flex-direction: column;
+		flex: 1;
+
+		.home__formContainer {
+			@include bgBlur(rgba(18, 18, 20, 0.6));
+			display: flex;
+			flex-direction: column;
+			gap: 6.4rem;
+			border-radius: 15px;
+			padding: min(8rem, 8vw);
+			align-items: center;
+			width: min(500px, 100%);
+
+			.formHeader {
+				text-align: center;
+
+				img {
+					margin-bottom: 5px;
+				}
+				h3 {
+					@extend .subtitle;
+				}
+			}
+
+			.form {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 6rem;
+
+				width: min(326px, 100%);
+
+				label {
+					@extend .label;
+					display: inline-block;
+					margin-bottom: 1.4rem;
+				}
+				input {
+					@extend .input;
+				}
+
+				.form__fieldContent {
+					width: 100%;
+				}
+
+				.formContent__field:not(:last-child) {
+					margin-bottom: 2.2rem;
+				}
+
+				button {
+					@extend .button;
+				}
+			}
+		}
+	}
+}

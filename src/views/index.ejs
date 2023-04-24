@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <section class="">
-      <h1>Lorem ipsum dolor sit doloremque.</h1>
-    </section>
-    <script src="./assets/js/bundle.js"></script>
-  </body>
-</html>
+<%- include('includes/base/head') %> <%- include('includes/header') %>
+
+<main class="home" id="home">
+	<div class="homeContainer">
+		<section class="home__banner">
+			<div class="home__banner__header">
+				<h1 class="title">Guarde todos seus contatos aqui</h1>
+				<p class="subtitle">
+					Um lugar intuitivo e protegido, para manter sua rede de contatos.
+				</p>
+			</div>
+		</section>
+		<section class="home__formSection">
+			<div class="home__formContainer">
+				<div class="formHeader">
+					<img src="./assets/logoIcon.svg" alt="Icone de logo" />
+					<h3 class="">Faça login e comece!</h3>
+				</div>
+				<form class="form" action="">
+					<div class="form__fieldContent">
+						<div class="formContent__field">
+							<label for="email">E-mail</label>
+							<input id="email" type="text" />
+						</div>
+
+						<div class="formContent__field">
+							<label for="password">Senha</label>
+							<input id="password" type="password" />
+						</div>
+					</div>
+					<button type="button">Entrar</button>
+				</form>
+			</div>
+		</section>
+	</div>
+</main>
+
+<%- include('includes/base/footer') %>

@@ -1,0 +1,65 @@
+.header {
+	position: fixed;
+	width: 100vw;
+	height: 70px;
+	background: transparent;
+	border-bottom: 1px solid transparent;
+	z-index: 1;
+
+	.container {
+		@include flexCenter(between);
+		@include boundaries();
+
+		height: 100%;
+	}
+
+	a.logo {
+		height: 100%;
+		text-align: center;
+
+		img {
+			height: 100%;
+			width: 160px;
+		}
+	}
+
+	nav {
+		height: 100%;
+
+		ul {
+			@include flexCenter(none);
+			height: 100%;
+			gap: 3.2rem;
+
+			li {
+				height: 100%;
+			}
+			a {
+				display: inline-block;
+				height: 100%;
+
+				display: flex;
+				align-items: center;
+
+				color: $primaryTextColor;
+				transition: color $delay;
+
+				transform: translateY(1px);
+				border-bottom: 2px solid transparent;
+
+				&.link--active {
+					border-bottom: 2px solid#81d8f7;
+				}
+			}
+
+			&:hover li:not(:hover) a {
+				color: darken($primaryTextColor, 50%);
+			}
+		}
+	}
+
+	&--scroll {
+		@include bgBlur(rgba(255, 255, 255, 0.01), 5px);
+		border-bottom: 1px solid #444;
+	}
+}
